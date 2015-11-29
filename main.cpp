@@ -98,28 +98,36 @@ int main()
     a.enqueue(3);
     a.enqueue(7);
     a.enqueue(12);
-    cout << "3 items are enqueued" << endl;
-
-    cout << "dequeue first item:" << endl;
-    a.dequeue();
+    a.enqueue(5);
+    a.enqueue(8);
+    a.enqueue(2);
+    a.enqueue(345);
+    a.enqueue(71);
+    a.enqueue(129);
+    a.enqueue(333);
+    a.enqueue(72);
+    a.enqueue(42);
+    a.enqueue(23);
+    a.enqueue(5);
+    a.enqueue(9);
+    a.enqueue(998);
+    a.enqueue(76);
+    a.enqueue(56);
+    cout << "18 items are enqueued" << endl;
 
     cout << "check isFull: " << a.isFull() << endl;
 
-    cout << "dequeue second item:" << endl;
-    a.dequeue();
+    for(int i=1; i<19; i++){
+        cout << "enqueue item " << i << endl;
+        a.dequeue();
+    }
 
-    cout << "check isEmpty: " << a.isEmpty() << endl;
+    cout << "check isEmpty after all items are dequeued " << a.isEmpty() << endl;
 
-    cout << "dequeue last item:" << endl;
-    a.dequeue();
+    a.enqueue(222);
+    cout << "one more item is enqued" << endl;
 
-    cout << "check is empty after last dequeue: " << a.isEmpty() << endl;
-
-    cout << "enqueue one item" << endl;
-    a.enqueue(4);
-
-    cout << "check is empty: " << a.isEmpty() << endl;
-
+    cout << "makeEmpty is called" << endl;
     a.makeEmpty();
-    cout << "check is empty after make empty: " << a.isEmpty() << endl;
+    cout << "check isEmpty after makeEmpty: " << a.isEmpty() << endl;
 }
